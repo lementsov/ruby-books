@@ -1,24 +1,3 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Станом на 23:00 16.12.2023 - зробив Read таблиці з книгами для сторінки index, і кожен окремий елемент ( книга ) для сторінки show. Я не знаю, наскільки доцільно використовувати readme файл для подібних записів, але) Зараз планую остаточно дописати CRUD, допилити дизайн, хочеться, щоб виглядало красивіше, ніж зараз. Також, думаю про те, наскільки знання англійської мене виручають, тому, що на українському ютубі я знайшов лише 1 курс по RoR, на англійському ютубі останній повний курс знайшов з датою завантаження 2 роки тому, не думаю, що це актуально, тому документація, привіт, ти і лише ти ( ну і зовсім небагато stackoverflow ). 
