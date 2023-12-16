@@ -1,3 +1,5 @@
+
+
 <style>
     * {
   margin: 0;
@@ -22,7 +24,7 @@ body {
 
 .center {
   display: flex;
-  margin: 276.5px auto; 
+  margin: 250px auto; 
 }
 
 .book_info {
@@ -74,6 +76,10 @@ body {
 .book_info_upper_right {
   padding: 5px 0 0 15px;
 }
+
+.blackText a {
+    color: #232323;
+}
 </style>
 
 <section class="center book_info">
@@ -93,4 +99,8 @@ body {
       </section>
     </section>
   </div>
+  <h3 class="blackText"><%= link_to "змінити дані про книгу", edit_book_path(@book) %></h3>
+  <h3 class="blackText"><%= button_to "видалити книгу", book_path(@book), 
+        method: :delete,
+        data: { confirm: "Are you sure?"}%></h3>
 </section>
