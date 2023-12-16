@@ -1,0 +1,96 @@
+<style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.book_img {
+  width: 160px;
+  height: 240px;
+  background-size: cover;
+  border-radius: 4px;
+}
+
+body {
+  height: 100%;
+  background: rgb(43,43,57);
+  background: linear-gradient(135deg, rgba(43,43,57,1) 0%, rgba(101,56,157,1) 100%);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.center {
+  display: flex;
+  margin: 276.5px auto; 
+}
+
+.book_info {
+  display: flex;
+  padding: 15px 20px 15px 20px;
+  justify-content: space-between;
+  width: 800px;
+  height: 400px;
+  background-color: #232323;
+  border-radius: 12px;
+}
+
+.title {
+  color: #fff;
+  font-size: 30px;
+}
+
+.author {
+  color: #fff;
+  padding: 5px 0 5px 0;
+}
+
+.year {
+  color: #fff;
+  padding: 0 0 12.5px 0;
+}
+
+.description {
+  max-width: 400px;
+  color: #fff;
+}
+
+.price {
+  color: #fff;
+}
+
+.order_btn {
+  padding: 15px 20px;
+  border-radius: 9px;
+  background-color: #fff;
+  font-weight: 600;
+  border: none;
+}
+
+.book_info_upper {
+  display: flex;
+}
+
+.book_info_upper_right {
+  padding: 5px 0 0 15px;
+}
+</style>
+
+<section class="center book_info">
+      <section class="book_info_upper">
+        <img src="https://bookclub.ua/images/db/goods/22573_33351.jpg" alt="" class="book_img">
+          <section class="book_info_upper_right">
+            <h2 class="title"><%= @book.title %></h2>
+            <h3 class="author"><%= @book.author %></h3>
+            <h4 class="year"><%= @book.year %></h4>
+            <h5 class="description"><%= @book.descriptios %></h5>
+          </section>
+      </section>
+      
+      <section class="book_info_bottom">
+      <h2 class="price"><%= @book.price %>$</h2>
+      <button style="align-self: flex-start" class="order_btn">Замовити</button>
+      </section>
+    </section>
+  </div>
+</section>

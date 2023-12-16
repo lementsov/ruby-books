@@ -1,13 +1,13 @@
 Rails.application.routes.draw do
   Rails.application.routes.draw do
-    root "articles#index"
+    root "books#index"
   
-    get "/articles", to: "articles#index"
-    get "/articles/:id", to: "articles#show"
+    get "/books", to: "books#index"
+    get "/books/:id", to: "books#show"
   end
 
   Rails.application.routes.draw do
-    get "/articles", to: "articles#index"
+    get "/books", to: "books#index"
   
     # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   end

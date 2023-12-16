@@ -1,0 +1,21 @@
+<style>
+    li {
+        padding: 10px 0 10px 0;
+    }
+    li a {
+        font-size: 24px;
+        color: black;
+    }
+</style>
+
+<h1>Books#index</h1>
+
+<h1>Articles</h1>
+
+<ul>
+  <% @books.each do |book| %>
+    <li>
+      <a href="books/<%= book.id %>"><%= book.title %></a>
+    </li>
+  <% end %>
+</ul>
