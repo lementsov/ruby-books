@@ -13,3 +13,149 @@
  *= require_tree .
  *= require_self
  */
+
+
+ @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+/* ===================== HEADER ALL */
+
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ }
+ 
+ ul {
+    list-style: none;
+    padding:0;
+    margin:0;
+    font-family: 'Roboto', sans-serif;
+ }
+
+ .container {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    background-color: rgb(238, 230, 221);
+    min-height: 80px;
+}
+
+.header ul {
+    display: flex;
+    gap: 60px;
+}
+
+.header li {
+    font-size: 24px;
+    font-weight: 400;
+    color: #232323;
+}
+
+.header li:hover {
+    text-decoration: underline #38182b;
+}
+
+/* ===================== SHOW BOOK */
+
+.book_info {   
+    display: flex;
+    width: 880px;
+    min-height: 320px;
+    background-color: rgb(238, 230, 221);
+    border-radius: 12px;
+    margin: 20px auto;
+}
+
+.book_img {
+    width: 240px;
+    height: 320px;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+}
+
+.title, .author, .year, .description, .price, .orden_btn button {
+    font-family: 'Roboto', sans-serif;
+    color: #232323;
+}
+
+.book_info_upper_right {
+    padding-left: 10px;
+}
+
+.title {
+    font-weight: 500;
+    font-size: 28px;
+    padding: 10px 0 5px 0;
+}
+
+.author {
+    font-weight: 500;
+    font-size: 22px;
+}
+
+.description {
+    padding-top: 5px;
+    max-width: 400px;
+    opacity: 0.8;
+    font-size: 14px;
+    font-style: italic;
+}
+
+.text_italic {
+    font-style: italic;
+    font-size: 18px;
+    font-weight: 300;
+    padding-left: 5px;
+}
+
+.price {
+    font-size: 20px;
+    opacity: 0.85;
+}
+
+.order_btn {
+    margin-left: 8px;
+    padding: 7px 12px;
+    background-color: rgb(245, 244, 242);
+    transition: ease-in 0.6s;
+    border: none;
+    border-radius: 7px;
+}
+
+.order_btn:hover {
+    background-color: #232323;
+    color: white;
+    transition: ease-in 0.6s;
+}
+
+.book_info_bottom {
+    display: flex;
+    align-items: flex-end;
+    padding: 0 0 20px 35px;
+}
+
+a {
+    text-decoration: none;
+    text-transform: none;
+}
+
+.li_header a {
+    color: #232323;
+}
+
+.li_header_button button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    font-weight: 400;
+    color: #232323;
+}
+
+.li_header_button button:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}

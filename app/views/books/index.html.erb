@@ -1,23 +1,32 @@
-<style>
-    li {
-        padding: 10px 0 10px 0;
-    }
-    li a {
-        font-size: 24px;
-        color: black;
-    }
-</style>
-
-<h1>Books#index</h1>
-
-<h1>Articles</h1>
+<header class="header">
+        <div class="container">
+            <ul class="ul_header">
+                <li class="li_header"><%= link_to "Головна сторінка", root_path() %></li>
+                <li class="li_header"><%= link_to "Нова книга", new_book_path %></li>
+            </ul>
+        </div>
+    </header>
 
 <ul>
   <% @books.each do |book| %>
-    <li>
-      <%= link_to book.title, book %>
-    </li>
+  <section class="center book_info">
+        <img src="https://bookclub.ua/images/db/goods/22573_33351.jpg" alt="" class="book_img">
+        <section class="book_info_upper">
+          
+            <section class="book_info_upper_right">
+              <h2 class="title"><%= book.title %><span class="text_italic">(<%= book.year %>)</span></h2>
+              <h3 class="author"><%= book.author %></h3>
+              <h5 class="description"><%= book.descriptios %></h5>
+            </section>
+        </section>
+        
+        <section class="book_info_bottom">
+        <h2 class="price"><%= book.price %>грн.</h2>
+        <button class="order_btn">Замовити</button>
+        </section>
+      </section>
+    </div>
+  </section>
   <% end %>
 </ul>
 
-<%= link_to "New Book", new_book_path %>

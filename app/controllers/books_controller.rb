@@ -41,6 +41,16 @@ class BooksController < ApplicationController
     redirect_to root_path, status: :see_other
   end
 
+  def copyBook
+    @book = Book.new(book_params)
+
+    if @book.save
+      redirect_to @book
+    else
+      render :new, status: :unprocessable_entity
+    end
+  end
+
   private
     def book_params
       params.require(:book).permit(:title, :author, :year, :descriptios, :price)

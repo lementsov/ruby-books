@@ -1,5 +1,5 @@
 
-
+<%# 
 <style>
     * {
   margin: 0;
@@ -79,29 +79,36 @@ body {
 
 .blackText a {
     color: #232323;
-}
+} %>
 </style>
 
-<section class="center book_info">
-      <section class="book_info_upper">
-        <img src="https://bookclub.ua/images/db/goods/22573_33351.jpg" alt="" class="book_img">
-          <section class="book_info_upper_right">
-            <h2 class="title"><%= @book.title %></h2>
-            <h3 class="author"><%= @book.author %></h3>
-            <h4 class="year"><%= @book.year %></h4>
-            <h5 class="description"><%= @book.descriptios %></h5>
-          </section>
-      </section>
-      
-      <section class="book_info_bottom">
-      <h2 class="price"><%= @book.price %>$</h2>
-      <button style="align-self: flex-start" class="order_btn">Замовити</button>
-      </section>
-    </section>
-  </div>
-  <h3 class="blackText"><%= link_to "на головну сторінку", root_path() %></h3>
-  <h3 class="blackText"><%= link_to "змінити дані про книгу", edit_book_path(@book) %></h3>
-  <h3 class="blackText"><%= button_to "видалити книгу", book_path(@book), 
+    <header class="header">
+        <div class="container">
+            <ul class="ul_header">
+                <li class="li_header"><%= link_to "Головна сторінка", root_path() %></li>
+                <li class="li_header"><%= link_to "Змінити дані про книгу", edit_book_path(@book) %></li>
+                <li class="li_header li_header_button"><%= button_to "Видалити книгу", book_path(@book), 
         method: :delete,
-        data: { confirm: "Are you sure?"}%></h3>
-</section>
+        data: { confirm: "Are you sure?"}%></li>
+            </ul>
+        </div>
+    </header>
+
+<section class="center book_info">
+        <img src="https://bookclub.ua/images/db/goods/22573_33351.jpg" alt="" class="book_img">
+        <section class="book_info_upper">
+          
+            <section class="book_info_upper_right">
+              <h2 class="title"><%= @book.title %><span class="text_italic">(<%= @book.year %>)</span></h2>
+              <h3 class="author"><%= @book.author %></h3>
+              <h5 class="description"><%= @book.descriptios %></h5>
+            </section>
+        </section>
+        
+        <section class="book_info_bottom">
+        <h2 class="price"><%= @book.price %>грн.</h2>
+        <button class="order_btn">Замовити</button>
+        </section>
+      </section>
+    </div>
+  </section>

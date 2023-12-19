@@ -1,0 +1,8 @@
+.container {
+    max-width: 1440px;
+}
+
+.header {
+    background-color: rgb(230, 198, 158);
+    min-height: 200px;
+}
