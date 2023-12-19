@@ -24,7 +24,7 @@ body {
 
 .center {
   display: flex;
-  margin: 250px auto; 
+  margin: 243.5px auto; 
 }
 
 .book_info {
@@ -99,6 +99,7 @@ body {
       </section>
     </section>
   </div>
+  <h3 class="blackText"><%= link_to "на головну сторінку", root_path() %></h3>
   <h3 class="blackText"><%= link_to "змінити дані про книгу", edit_book_path(@book) %></h3>
   <h3 class="blackText"><%= button_to "видалити книгу", book_path(@book), 
         method: :delete,
